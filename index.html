@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  @file        index.html
+  @author      Gabriel DA SILVA PEIXOTO
+  @description Portfolio personnel — Développeur Full-Stack
+               BTS SIO SLAM — Recherche d'alternance Bac+3
+  @target      Lighthouse 100/100 (SEO · Performance · A11y)
+  ============================================================
+-->
+
+<!--
+  @seo lang="fr"
+  Attribut `lang` obligatoire pour :
+  - Que les lecteurs d'écran (NVDA, VoiceOver) appliquent la bonne phonologie.
+  - Que Googlebot détecte la langue de la page (signal de pertinence SEO).
+-->
+<html lang="fr">
+
+<head>
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section ENCODAGE & VIEWPORT
+       • charset UTF-8 : support universel des caractères.
+       • viewport width=device-width : active le responsive design,
+         critère Mobile-Friendly indexé par Google (Mobile-First).
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section BALISE TITLE
+       @seo Environ 55-60 caractères pour un affichage complet dans la SERP.
+            Mot-clé principal "Développeur Full Stack" en premier (head-keyword).
+            Nom propre + ville pour le référencement local (Grenoble).
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <title>Gabriel DSP — Développeur Full Stack | Alternance Bac+3</title>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section META DESCRIPTION
+       @seo ~155 caractères incluant les compétences clés (Node.js, Vue.js, Java)
+            et le statut recherché (alternance Bac+3).
+            Apparaît dans le snippet Google — impacte le Click-Through Rate (CTR).
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <meta
+    name="description"
+    content="Portfolio de Gabriel DA SILVA PEIXOTO, Développeur Full Stack (Node.js, Vue.js, Java) en BTS SIO SLAM à Grenoble. En recherche d'alternance Bac+3 dès 2026." />
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section CANONICAL
+       @seo Évite le contenu dupliqué si la page est accessible via plusieurs URLs.
+            Signale à Google l'URL de référence à indexer.
+            ⚠️  Remplace "https://portfoliodsg.vercel.app/" par ton domaine réel.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <link rel="canonical" href="https://portfoliodsg.vercel.app/" />
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section ROBOTS & INDEXATION
+       @seo index,follow : autorise l'indexation et le suivi des liens.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Gabriel DA SILVA PEIXOTO" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section OPEN GRAPH (Facebook, LinkedIn, Discord…)
+       @seo Contrôle l'aperçu partagé sur les réseaux sociaux.
+            og:image optimise la visibilité quand un recruteur partage le lien.
+            ⚠️  Remplace les valeurs entre crochets par les tiennes.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://portfoliodsg.vercel.app/" />
+  <meta property="og:title"       content="Gabriel DSP — Développeur Full Stack | Alternance Bac+3" />
+  <meta property="og:description" content="Portfolio de Gabriel DA SILVA PEIXOTO, Développeur Full Stack (Node.js, Vue.js, Java) en BTS SIO SLAM à Grenoble. En recherche d'alternance Bac+3 dès 2026." />
+  <!-- @perf og:image doit être une image ≥ 1200×630 px (ratio 1.91:1) -->
+  <meta property="og:image"       content="https://portfoliodsg.vercel.app/public/og-cover.png" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta property="og:site_name"   content="Gabriel DSP — Portfolio" />
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section TWITTER CARDS
+       @seo summary_large_image : affiche une grande vignette sur Twitter/X.
+            Améliore le CTR depuis les partages des recruteurs tech.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Gabriel DSP — Développeur Full Stack | Alternance Bac+3" />
+  <meta name="twitter:description" content="Portfolio de Gabriel DA SILVA PEIXOTO, Développeur Full Stack (Node.js, Vue.js, Java) en BTS SIO SLAM à Grenoble." />
+  <meta name="twitter:image"       content="https://portfoliodsg.vercel.app/public/og-cover.png" />
+  <!-- ⚠️  Remplace par ton handle Twitter : -->
+  <meta name="twitter:creator"     content="@gabriel_dsp" />
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section DONNÉES STRUCTURÉES — JSON-LD (Schema.org)
+       @seo Google lit ce bloc pour générer des Rich Snippets.
+            Type `Person` + `ProfilePage` → Googlebot comprend
+            qu'il s'agit d'un portfolio individuel, ce qui améliore
+            la pertinence pour une recherche nominative.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://portfoliodsg.vercel.app/#person",
+        "name": "Gabriel DA SILVA PEIXOTO",
+        "alternateName": "Gabriel DSP",
+        "jobTitle": "Développeur Full Stack",
+        "description": "Étudiant en BTS SIO SLAM, spécialisé Node.js, Vue.js et Java. En recherche d'alternance Bac+3.",
+        "url": "https://portfoliodsg.vercel.app/",
+        "image": "https://portfoliodsg.vercel.app/public/og-cover.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Grenoble",
+          "addressCountry": "FR"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "BTS SIO SLAM"
+        },
+        "knowsAbout": ["Node.js", "Vue.js", "Java", "JavaFX", "Docker", "PostgreSQL", "REST API"],
+        "sameAs": [
+          "https://www.linkedin.com/in/VOTRE_PROFIL_LINKEDIN",
+          "https://github.com/VOTRE_PROFIL_GITHUB"
+        ]
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://portfoliodsg.vercel.app/#webpage",
+        "url": "https://portfoliodsg.vercel.app/",
+        "name": "Gabriel DSP — Portfolio Développeur Full Stack",
+        "description": "Portfolio personnel de Gabriel DA SILVA PEIXOTO, Développeur Full Stack en BTS SIO SLAM.",
+        "inLanguage": "fr",
+        "about": { "@id": "https://portfoliodsg.vercel.app/#person" },
+        "dateModified": "2026-04-18"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section POLICES — PRECONNECT + PRELOAD (Core Web Vitals : LCP)
+       @perf `preconnect` ouvre le tunnel TCP/TLS vers Google Fonts
+              avant que le navigateur parse le CSS, réduisant la latence DNS.
+       @perf `crossorigin` est obligatoire sur fonts.gstatic.com car
+              les polices sont des ressources CORS.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!--
+    @perf `rel="preload" as="style"` + `onload` : charge la police
+          de façon non-bloquante. `rel="stylesheet"` dans onload
+          l'active dès qu'elle est disponible sans bloquer le rendu.
+          Fallback `<noscript>` pour les navigateurs sans JS.
+  -->
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;700;800;900&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;700;800;900&display=swap"
+      rel="stylesheet" />
+  </noscript>
+
+  <!--
+    @perf Material Symbols en `preload` non-bloquant également.
+          Les icônes ne font pas partie du LCP, l'absence de rendu-blocking
+          gain ≈ 200-400ms sur le First Contentful Paint (FCP).
+  -->
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet" />
+  </noscript>
+
+  <!-- Reveal.js CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" />
+
+  <!-- Feuille de style locale -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<!--
+  ============================================================
+  @section BODY
+  @a11y `bg-surface text-on-surface` : classes utilitaires définissant
+         le contraste de base (ratio minimum WCAG AA : 4.5:1).
+  ============================================================
+-->
+<body class="bg-surface text-on-surface">
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section SKIP LINK (Accessibilité WCAG 2.4.1)
+       @a11y Lien invisible (visible au focus clavier) qui permet aux utilisateurs
+             de lecteurs d'écran / navigation clavier de sauter directement
+             au contenu principal, évitant la répétition de la navigation.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section NAVIGATION PRINCIPALE
+       @seo `<header>` + `<nav>` : balisage sémantique HTML5.
+             Google identifie la zone de navigation, ce qui améliore
+             la compréhension de la structure du site (crawl).
+       @a11y `aria-label="Navigation principale"` différencie cette nav
+             d'autres `<nav>` possibles (ex. pagination) pour les SR.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <header>
+    <nav class="nav-bar" aria-label="Navigation principale">
+      <div class="nav-container">
+        <!--
+          @a11y Le logo est un lien vers l'ancre #hero (haut de page).
+                `aria-label` décrit la destination pour les lecteurs d'écran.
+        -->
+        <a href="#hero" class="nav-logo" aria-label="Retour en haut de page — Gabriel DSP">GABRIEL DSP</a>
+
+        <!--
+          @a11y `aria-label` sur la liste de liens contextualise le groupe
+                pour les utilisateurs de technologies d'assistance.
+        -->
+        <ul class="nav-links" role="list" aria-label="Liens de navigation">
+          <li><a href="#work"       class="nav-link">Projets</a></li>
+          <li><a href="#fiches"     class="nav-link">Fiches E5</a></li>
+          <li><a href="#experience" class="nav-link">Parcours</a></li>
+          <li>
+            <button
+              id="btn-oral-e5"
+              class="nav-link"
+              aria-haspopup="dialog"
+              aria-controls="slideshow-overlay"
+              aria-expanded="false"
+              aria-label="Ouvrir la présentation Oral E5">
+              Oral E5
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section CONTENU PRINCIPAL
+       @seo `<main>` + `id="main-content"` : point d'entrée du contenu
+             indexable. Google accorde plus de poids au texte dans `<main>`.
+       @a11y `id="main-content"` est la cible du skip-link ci-dessus.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <main id="main-content">
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         @section HERO
+         @seo `<section>` sémantique avec `aria-labelledby` pointant
+               vers le `<h1>` : Google comprend le thème de la section.
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="hero-section" id="hero" aria-labelledby="main-title">
+      <!-- Décorations visuelles : masquées des SR car non informatives -->
+      <div class="hero-bg-grid"   aria-hidden="true"></div>
+      <div class="hero-glow top-left"    aria-hidden="true"></div>
+      <div class="hero-glow bottom-right" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <!--
+          @seo Un seul <h1> par page (règle absolue SEO).
+               Contenu : nom complet → signal fort pour la recherche nominative
+               des recruteurs (Google « Gabriel DA SILVA PEIXOTO »).
+               Couplé au JSON-LD, renforce la Knowledge Graph Entity.
+          @a11y id="main-title" référencé par aria-labelledby sur la section.
+        -->
+        <h1 class="hero-title" id="main-title">
+          <span class="text-white block">GABRIEL</span>
+          <span class="stroke-text block">DA SILVA</span>
+          <span class="text-white block">PEIXOTO</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         @section À PROPOS
+         @seo `<section aria-labelledby>` + `<h2>` en 2ème niveau
+               de hiérarchie (h1 → h2 → h3, jamais de saut).
+               Le texte descriptif contient des mots-clés naturels
+               (interfaces, back-end, API) sans keyword stuffing.
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="about-grid">
+        <aside class="about-meta meta-slide-in" id="about-meta" aria-label="Localisation">
+          <p class="meta-label">Localisation</p>
+          <p class="meta-value">Grenoble, FR</p>
+        </aside>
+
+        <!-- Ligne décorative : masquée des SR -->
+        <div class="about-line-container" aria-hidden="true">
+          <div class="line-glow"></div>
+          <div class="about-line" id="about-line"></div>
+        </div>
+
+        <div class="about-content">
+          <!--
+            @a11y `role="status"` sur le badge de disponibilité →
+                  les SR annoncent ce contenu comme une information de statut,
+                  sans interrompre la lecture (aria-live="polite" implicite).
+          -->
+          <p class="status-indicator" role="status">
+            <span class="ping-dot" aria-hidden="true">
+              <span class="ping-animate"></span>
+              <span class="ping-static"></span>
+            </span>
+            <span class="status-text">Ouvert aux opportunités</span>
+          </p>
+
+          <!--
+            @seo h2 contient la proposition de valeur : "Précision technique"
+                 est mémorable et différenciateur pour un recruteur.
+          -->
+          <h2 id="about-title" class="about-title content-fade-up">
+            Précision technique.<br />
+            <span class="metallic-text">Liberté visuelle.</span>
+          </h2>
+
+          <div id="about-texts" class="about-texts content-fade-up delay-1">
+            <p>Je conçois des interfaces minimalistes et fonctionnelles, loin des modèles génériques. Mon approche
+              est simple : supprimer le superflu pour se concentrer sur l'essentiel et offrir une expérience
+              utilisateur fluide.</p>
+            <p>Sur le plan technique, je développe des solutions complètes en alliant des back-ends solides à
+              des interfaces réactives. Mon objectif est de construire des outils performants et durables qui
+              répondent aux exigences techniques d'aujourd'hui et de demain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         @section PROJETS (Drag Slider)
+         @seo `<section>` + `<h2>` pour que Googlebot segmente
+               cette zone comme "Projets Sélectionnés".
+               Chaque projet est un `<article>` car il est auto-suffisant
+               (titre, description, image) — sémantique la plus précise.
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="work" class="work-section" aria-labelledby="work-title">
+      <div class="work-header">
+        <h2 id="work-title">Projets Sélectionnés</h2>
+      </div>
+
+      <!--
+        @a11y `role="region"` + `aria-label` sur le slider :
+              les SR identifient cet espace comme une zone interactive dédiée.
+      -->
+      <div
+        class="gallery-wrapper"
+        id="gallery-wrapper"
+        role="region"
+        aria-label="Galerie de projets — glisser pour naviguer">
+
+        <!-- ══ Projet 1 : NutriScan ══ -->
+        <!--
+          @seo `<article>` est le conteneur sémantique idéal pour un projet
+                car il représente un contenu indépendant et réutilisable.
+        -->
+        <article class="work-card" aria-label="Projet NutriScan">
+          <div class="card-image-box shadow-box">
+            <!--
+              @perf `loading="eager"` sur la première image visible (LCP candidate).
+                    Pas de lazy-loading sur les images above-the-fold.
+              @perf `decoding="async"` : décode l'image hors du thread principal,
+                    évitant les blocages du rendu (améliore le TBT).
+              @perf `width` et `height` explicites : le navigateur réserve l'espace
+                    dans le DOM avant le chargement → CLS = 0 (Layout Shift nul).
+              @a11y `alt` descriptif contenant le nom du projet et sa technologie clé.
+            -->
+            <img
+              src="./public/nutriscan.png"
+              alt="Capture d'écran de NutriScan — Application d'analyse nutritionnelle par scan de code-barres"
+              class="card-img"
+              width="600"
+              height="400"
+              loading="eager"
+              decoding="async" />
+            <div class="card-overlay" aria-hidden="true">
+              <span class="card-status">CalculMyFood</span>
+            </div>
+          </div>
+          <h3 class="card-title">NutriScan</h3>
+          <p class="card-desc">Analyse nutritionnelle via scan barcode (Vue.js 3, Vite, Tailwind)</p>
+        </article>
+
+        <!-- ══ Projet 2 : Chainsaw Man ══ -->
+        <article class="work-card" aria-label="Projet Chainsaw Man — Landing page">
+          <div class="card-image-box shadow-box">
+            <!--
+              @perf `loading="lazy"` sur les images hors de la fenêtre initiale :
+                    différé le téléchargement, économise la bande passante.
+              @perf `decoding="async"` systématique sur toutes les images.
+            -->
+            <img
+              src="./public/chainsawman.png"
+              alt="Capture d'écran de la landing page Chainsaw Man — Arc Reze avec effets Parallax"
+              class="card-img"
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async" />
+            <div class="card-overlay" aria-hidden="true">
+              <span class="card-status">Reze Arc</span>
+            </div>
+          </div>
+          <h3 class="card-title">Chainsaw Man</h3>
+          <p class="card-desc">Landing page cinématique immersive (Parallax, Scroll Physics, JS Vanilla)</p>
+        </article>
+
+        <!-- ══ Projet 3 : CardiacTS ══ -->
+        <article class="work-card" aria-label="Projet CardiacTS — Application JavaFX pour la recherche cardiaque">
+          <div class="card-image-box shadow-box">
+            <img
+              src="./public/CardiacTS.png"
+              alt="Interface de CardiacTS — Application de bureau JavaFX pour l'imagerie cardiaque au laboratoire TIMC"
+              class="card-img"
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async" />
+            <div class="card-overlay" aria-hidden="true">
+              <span class="card-status">TIMC lab</span>
+            </div>
+          </div>
+          <h3 class="card-title">CardiacTS</h3>
+          <p class="card-desc">Imagerie cardiaque &amp; Big Data (Java, JavaFX, Architecture)</p>
+        </article>
+
+        <!-- ══ Doublons pour l'effet slider infini ══
+             @a11y aria-hidden="true" sur les cartes dupliquées :
+                   elles servent uniquement à l'effet visuel cyclique,
+                   et ne doivent pas être annoncées twice par les SR.
+        -->
+        <article class="work-card" aria-hidden="true">
+          <div class="card-image-box shadow-box">
+            <img src="./public/nutriscan.png" alt="" class="card-img" width="600" height="400" loading="lazy" decoding="async" />
+            <div class="card-overlay"><span class="card-status">CalculMyFood</span></div>
+          </div>
+          <h3 class="card-title">NutriScan</h3>
+          <p class="card-desc">Analyse nutritionnelle via scan barcode (Vue.js 3, Vite, Tailwind)</p>
+        </article>
+
+        <article class="work-card" aria-hidden="true">
+          <div class="card-image-box shadow-box">
+            <img src="./public/chainsawman.png" alt="" class="card-img" width="600" height="400" loading="lazy" decoding="async" />
+            <div class="card-overlay"><span class="card-status">Reze Arc</span></div>
+          </div>
+          <h3 class="card-title">Chainsaw Man</h3>
+          <p class="card-desc">Landing page cinématique immersive (Parallax, Scroll Physics, JS Vanilla)</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         @section PARCOURS (Timeline SVG)
+         @seo `<section>` + `<h2>` "Parcours Pro" → signal thématique clair.
+               Chaque expérience est un `<article>` avec `<h3>` comme titre
+               de niveau 3 cohérent dans la hiérarchie h1 > h2 > h3.
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="experience" class="exp-section" aria-labelledby="exp-title">
+      <div class="exp-container">
+        <h2 class="exp-main-title" id="exp-title">Parcours Pro</h2>
+
+        <!--
+          @a11y SVG décoratif : `aria-hidden="true"` pour que les SR
+                ignorent complètement cet élément graphique non informatif.
+          @perf SVG inline ou référencé en CSS est préférable à <img>
+                pour de petits graphiques vectoriels (pas de requête HTTP).
+        -->
+        <div class="exp-timeline-wrapper" aria-hidden="true">
+          <svg width="4" height="100%" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <line id="timeline-line" x1="2" y1="0" x2="2" y2="100%" class="svg-line" />
+          </svg>
+        </div>
+
+        <!-- @a11y `role="list"` explicite car CSS peut supprimer la sémantique de liste -->
+        <div class="exp-list-items" role="list">
+
+          <!-- ══ Expérience 1 : Stage Automatique & Industrie ══ -->
+          <article class="exp-item" id="exp-1" role="listitem">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-content-box">
+              <!--
+                @a11y `<time>` avec attribut `datetime` encode la date
+                      de façon machine-readable pour les SR et le JSON-LD.
+              -->
+              <time class="exp-date" datetime="2026-01/2026-03">01-2026 — 03-2026 • Stage</time>
+              <h3 class="exp-title">Développeur Full-Stack Node.js</h3>
+              <h4 class="exp-company">Automatique &amp; Industrie</h4>
+              <ul class="exp-bullets">
+                <li>Développement de nouvelles fonctionnalités sur <strong>Holonet</strong>, outil de gestion interne du groupe.</li>
+                <li>Participation à la migration du back-end de <strong>Go vers Node.js</strong>.</li>
+                <li>Environnement moderne utilisant <strong>Vue.js (Nuxt)</strong> et intégration d'API REST.</li>
+                <li>Travail en équipe agile (Scrum) et standardisation via <strong>Docker &amp; WSL</strong>.</li>
+              </ul>
+              <div class="exp-tags" aria-label="Technologies utilisées">
+                <span class="tag">Node.js</span>
+                <span class="tag">Nuxt / Vue.js</span>
+                <span class="tag">Scrum</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ══ Expérience 2 : Stage TIMC CNRS ══ -->
+          <article class="exp-item" id="exp-2" role="listitem">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-content-box">
+              <time class="exp-date" datetime="2025-03/2025-06">03-2025 — 06-2025 • Stage</time>
+              <h3 class="exp-title">Développeur Full-Stack Java</h3>
+              <h4 class="exp-company">Laboratoire TIMC - CNRS / UGA</h4>
+              <ul class="exp-bullets">
+                <li>Conception et développement de <strong>CardiacTS</strong>, application de bureau pour la recherche cardiaque.</li>
+                <li>Architecture logicielle en <strong>JavaFX</strong> suivant le pattern <strong>MVC</strong>.</li>
+                <li>Mise en place d'un stockage hybride : <strong>PostgreSQL</strong> (meta) et <strong>MinIO</strong> (imagerie S3).</li>
+                <li>Garantie de la traçabilité et de la sécurisation des données de santé sensibles.</li>
+              </ul>
+              <div class="exp-tags" aria-label="Technologies utilisées">
+                <span class="tag">JavaFX</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">MinIO</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ══ Expérience 3 : Freelance In the Wallet ══ -->
+          <article class="exp-item" id="exp-3" role="listitem">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-content-box">
+              <time class="exp-date" datetime="2025-03/2025-06">03-2025 — 06-2025 • Freelance</time>
+              <h3 class="exp-title">Développeur Web</h3>
+              <h4 class="exp-company">In the Wallet</h4>
+              <ul class="exp-bullets">
+                <li>Conception et développement d'une application web et d'un tableau de bord sécurisé pour une société d'investissement.</li>
+                <li>Mise en place d'une consultation des soldes, et suivi transactionnel.</li>
+              </ul>
+              <div class="exp-tags" aria-label="Technologies utilisées">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">EJS</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         @section FICHES DE RÉALISATIONS (E5)
+         @seo `<section>` thématique dédiée au BTS SIO E5 :
+               mots-clés ciblés "BTS SIO", "fiches de réalisations",
+               "épreuve E5" → pertinents pour une recherche recruteur CPI.
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="fiches" class="fiches-section" aria-labelledby="fiches-title">
+      <div class="fiches-container">
+        <header class="fiches-header">
+          <!--
+            @seo `<span>` comme eyebrow texte, NON en h3, pour ne pas
+                  interrompre la hiérarchie h2 > h3.
+                  "BTS SIO — Épreuve E5" est un signal sémantique fort.
+          -->
+          <span class="fiches-eyebrow">BTS SIO — Épreuve E5</span>
+          <h2 class="fiches-title" id="fiches-title">
+            Fiches de Réalisations<br />
+            <span class="fiches-title-accent">Professionnelles</span>
+          </h2>
+          <p class="fiches-subtitle">
+            Situations professionnelles et compétences documentées au cours du BTS.<br />
+            Cliquez sur une fiche pour consulter le PDF associé.
+          </p>
+          <div class="fiches-actions">
+            <a href="./public/fiches/Tableau-de-Synthese-E5-Gabriel-DSP.pdf" target="_blank" rel="noopener noreferrer" class="btn-e5-download">
+              <span class="material-symbols-outlined">analytics</span>
+              Tableau de Synthèse E5 (Compétences)
+            </a>
+          </div>
+        </header>
+
+        <!--
+          @a11y `role="list"` sur la grille pour que les SR annoncent
+                le nombre d'éléments ("liste de 12 éléments").
+        -->
+        <div class="fiches-grid" id="fiches-grid" role="list">
+
+          <!--
+            @template Fiche générée × 12
+            @a11y Chaque `<article>` représente une fiche indépendante.
+                  Le lien PDF a un `aria-label` précis pour le SR
+                  (sans cela, il lirait seulement "Ouvrir").
+            @seo `rel="noopener noreferrer"` sur les liens target="_blank" :
+                 sécurité (tabnapping) + signal de qualité Lighthouse.
+          -->
+
+          <!-- Fiche 1 -->
+          <article class="fiche-card" id="fiche-1" role="listitem">
+            <div class="fiche-number" aria-hidden="true">01</div>
+            <div class="fiche-body">
+               <span class="fiche-tag">Compétence 1</span>
+               <h3 class="fiche-name">Gérer le patrimoine informatique</h3>
+               <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-01-DASILVAPEIXOTO_Gabriel-Gestion-Versionning.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 1 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 2 -->
+          <article class="fiche-card" id="fiche-2" role="listitem">
+            <div class="fiche-number" aria-hidden="true">02</div>
+            <div class="fiche-body">
+               <span class="fiche-tag">Compétence 2</span>
+               <h3 class="fiche-name">Répondre aux incidents</h3>
+               <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-02-DASILVAPEIXOTO_Gabriel_PGD.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 2 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 3 -->
+          <article class="fiche-card" id="fiche-3" role="listitem">
+            <div class="fiche-number" aria-hidden="true">03</div>
+            <div class="fiche-body">
+               <span class="fiche-tag">Compétence 3</span>
+               <h3 class="fiche-name">Développer la présence en ligne</h3>
+               <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-03-DASILVAPEIXOTO_Gabriel-Conteneurisation-de-services.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 3 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 4 -->
+          <article class="fiche-card" id="fiche-4" role="listitem">
+            <div class="fiche-number" aria-hidden="true">04</div>
+            <div class="fiche-body">
+               <span class="fiche-tag">Compétence 4</span>
+               <h3 class="fiche-name">Travailler en mode projet</h3>
+               <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-04-DASILVAPEIXOTO_Gabriel-Agilité.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 4 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 5 -->
+          <article class="fiche-card" id="fiche-5" role="listitem">
+            <div class="fiche-number" aria-hidden="true">05</div>
+            <div class="fiche-body">
+               <span class="fiche-tag">Compétence 5</span>
+               <h3 class="fiche-name">Mettre à disposition un service</h3>
+               <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-05-DASILVAPEIXOTO_Gabriel-Déploiement-d’une-Application-en-JavaFX.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 5 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 6 -->
+          <article class="fiche-card" id="fiche-6" role="listitem">
+            <div class="fiche-number" aria-hidden="true">06</div>
+            <div class="fiche-body">
+               <span class="fiche-tag">Compétence 6</span>
+               <h3 class="fiche-name">Concevoir une solution applicative</h3>
+               <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-06-DASILVAPEIXOTO_Gabriel-Validation-test-api-Postman.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 6 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 7 -->
+          <article class="fiche-card" id="fiche-7" role="listitem">
+            <div class="fiche-number" aria-hidden="true">07</div>
+            <div class="fiche-body">
+              <span class="fiche-tag">Fiche 7</span>
+              <h3 class="fiche-name">Flux Git & Pull Requests</h3>
+              <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-07-DASILVAPEIXOTO_Gabriel-Maîtriser-le-flux-de-travail-Git-et-les-Pull-Requests.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 7 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 8 -->
+          <article class="fiche-card" id="fiche-8" role="listitem">
+            <div class="fiche-number" aria-hidden="true">08</div>
+            <div class="fiche-body">
+              <span class="fiche-tag">Fiche 8</span>
+              <h3 class="fiche-name">Documentation Technique</h3>
+              <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-08-DASILVAPEIXOTO_Gabriel-Rédaction-d’une-documentation-technique..pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 8 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 9 -->
+          <article class="fiche-card" id="fiche-9" role="listitem">
+            <div class="fiche-number" aria-hidden="true">09</div>
+            <div class="fiche-body">
+              <span class="fiche-tag">Fiche 9</span>
+              <h3 class="fiche-name">Personal Branding</h3>
+              <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-09-DASILVAPEIXOTO_Gabriel-Personal-Branding.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 9 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 10 -->
+          <article class="fiche-card" id="fiche-10" role="listitem">
+            <div class="fiche-number" aria-hidden="true">10</div>
+            <div class="fiche-body">
+              <span class="fiche-tag">Fiche 10</span>
+              <h3 class="fiche-name">SEO (Référencement)</h3>
+              <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-10-DASILVAPEIXOTO_Gabriel-SEO.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 10 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 11 -->
+          <article class="fiche-card" id="fiche-11" role="listitem">
+            <div class="fiche-number" aria-hidden="true">11</div>
+            <div class="fiche-body">
+              <span class="fiche-tag">Fiche 11</span>
+              <h3 class="fiche-name">Environnement de Dév Pro</h3>
+              <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-11-DASILVAPEIXOTO_Gabriel-Structuration-d’un-environnement-de-développement-professionnel.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 11 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+          <!-- Fiche 12 -->
+          <article class="fiche-card" id="fiche-12" role="listitem">
+            <div class="fiche-number" aria-hidden="true">12</div>
+            <div class="fiche-body">
+              <span class="fiche-tag">Fiche 12</span>
+              <h3 class="fiche-name">Réalisations d'une application web monolithe</h3>
+              <p class="fiche-hint">Cliquez pour consulter le PDF</p>
+            </div>
+            <a href="./public/fiches/SIO-FRP-12-DASILVAPEIXOTO_Gabriel-Réaliser_une_application_web_monolithe.pdf" target="_blank" rel="noopener noreferrer"
+               class="fiche-btn" aria-label="Ouvrir la fiche de réalisation 12 en PDF">
+              <span class="material-symbols-outlined" aria-hidden="true">picture_as_pdf</span>
+              Ouvrir
+            </a>
+          </article>
+
+        </div><!-- /fiches-grid -->
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section FOOTER
+       @seo `<footer>` sémantique : contient infos de contact et copyright.
+             Google extrait les données du footer pour enrichir le Knowledge
+             Panel (adresse, liens sociaux).
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <footer class="site-footer" aria-label="Pied de page — Informations de contact">
+    <p>
+      &copy; <time datetime="2026">2026</time> Gabriel DA SILVA PEIXOTO —
+      Développeur Full Stack &middot; Grenoble, France
+    </p>
+    <nav aria-label="Liens sociaux">
+      <!--
+        @seo `rel="noopener noreferrer"` obligatoire sur tout lien externe
+              en target="_blank" (sécurité Lighthouse + signal de qualité).
+        @a11y `aria-label` car le texte du lien seul ("LinkedIn") est
+              insuffisant pour décrire la destination exacte.
+      -->
+      <a
+        href="https://www.linkedin.com/in/VOTRE_PROFIL_LINKEDIN"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Profil LinkedIn de Gabriel DA SILVA PEIXOTO (nouvel onglet)">
+        LinkedIn
+      </a>
+      &nbsp;·&nbsp;
+      <a
+        href="https://github.com/VOTRE_PROFIL_GITHUB"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Profil GitHub de Gabriel DA SILVA PEIXOTO (nouvel onglet)">
+        GitHub
+      </a>
+    </nav>
+  </footer>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section SLIDESHOW OVERLAY (Présentation Oral E6)
+       @a11y `role="dialog"` + `aria-modal="true"` : les SR confinent
+             le focus à l'intérieur de l'overlay quand il est ouvert
+             (trap focus pattern — WCAG 2.4.3).
+       @a11y `aria-labelledby` pointe vers le titre du slide actif.
+       @a11y `aria-hidden="true"` par défaut : le contenu du dialog
+             est masqué des SR quand l'overlay est fermé.
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div
+    id="slideshow-overlay"
+    class="slideshow-overlay hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Présentation Oral E5 — BTS SIO"
+    aria-hidden="true">
+
+    <!-- Bouton Fermer -->
+    <button
+      id="btn-close-slideshow"
+      class="btn-close-slideshow"
+      aria-label="Fermer la présentation">
+      <span class="material-symbols-outlined" aria-hidden="true">close</span>
+    </button>
+
+    <!-- Reveal.js Structure -->
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Slide 1 : Titre -->
+        <section>
+          <h1 class="slide-title">Épreuve E5</h1>
+          <h2 class="slide-subtitle">Da Silva Peixoto Gabriel</h2>
+          <p class="slide-desc">Étudiant en BTS SIO deuxième année</p>
+        </section>
+
+        <!-- Slide 2 : Plan -->
+        <section>
+          <h2 class="slide-title">Plan de Présentation</h2>
+          <ul class="slide-list-alt">
+            <li>Présentation personnelle</li>
+            <li>Stage 1ère année : Automatique &amp; Industrie</li>
+            <li>Stage 2ème année : Laboratoire TIMC</li>
+            <li>Présentation AP (Ateliers Professionnalisants)</li>
+            <li>Conclusion</li>
+          </ul>
+        </section>
+
+        <!-- Slide 3 : Présentation personnelle (Vertical) -->
+        <section>
+          <section>
+            <h2 class="slide-title">Présentation personnelle</h2>
+            <p>Mon parcours et mes diplômes</p>
+            <div class="sub-slide-hint">⬇️</div>
+          </section>
+          <section>
+            <h3>Mes diplômes</h3>
+            <p>Bac Général — Option Informatique, Mathématiques et CIAV (Cinéma)</p>
+          </section>
+          <section>
+            <h3>Licence 0 IMA</h3>
+            <p>Informatique et Mathématiques Appliquées</p>
+            <p class="text-small">(Trop théorique — Redirection vers BTS)</p>
+          </section>
+          <section>
+            <h3>BTS SIO</h3>
+            <p>Option SLAM (Solutions Logicielles et Applications Métier)</p>
+          </section>
+          <section>
+            <h3>En résumé</h3>
+            <table class="reveal-table">
+              <thead>
+                <tr>
+                  <th>Année</th>
+                  <th>Formation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2022 - 2023</td>
+                  <td>Bac Général</td>
+                </tr>
+                <tr>
+                  <td>2023 - 2024</td>
+                  <td>Licence 0 IMA</td>
+                </tr>
+                <tr>
+                  <td>2024 - 2026</td>
+                  <td>BTS SIO (Grenoble)</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <!-- Slide 4 : Stage 1ère année (Vertical) -->
+        <section>
+          <section>
+            <h2 class="slide-title">Stage 1ère année</h2>
+            <h3 class="slide-subtitle">Automatique &amp; Industrie (A&amp;I)</h3>
+            <div class="sub-slide-hint">⬇️</div>
+          </section>
+          <section>
+            <h3>Missions &amp; Agilité</h3>
+            <p>Immersion au sein d'une équipe technique en méthode <strong>Scrum</strong>.</p>
+          </section>
+          <section>
+            <h3>Technologies utilisées</h3>
+            <ul>
+              <li><strong>Frontend</strong> : Vue.js avec Nuxt</li>
+              <li><strong>Backend</strong> : Go (initiation) puis transition vers <strong>Node.js</strong></li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Slide 5 : Stage 2ème année (Vertical) -->
+        <section>
+          <section>
+            <h2 class="slide-title">Stage 2ème année</h2>
+            <h3 class="slide-subtitle">Laboratoire TIMC - CNRS / UGA</h3>
+            <div class="sub-slide-hint">⬇️</div>
+          </section>
+          <section>
+            <h3>Application CardiacTS</h3>
+            <p>Conception d'une application pour gérer des données cardiaques.</p>
+            <p>Client lourd en <strong>Java</strong> et <strong>JavaFX</strong>.</p>
+          </section>
+          <section>
+            <h3>Infrastructure</h3>
+            <p>Utilisation de <strong>Docker</strong> pour l'environnement et <strong>MinIO</strong> pour le stockage S3.</p>
+          </section>
+        </section>
+
+        <!-- Slide 6 : Présentation AP (Vertical) -->
+        <section>
+          <section>
+            <h2 class="slide-title">Présentation AP</h2>
+            <p>Ateliers Professionnalisants</p>
+            <div class="sub-slide-hint">⬇️</div>
+          </section>
+          <section>
+            <h3>Bases de Docker</h3>
+            <p>Conteneurisation et isolation des services.</p>
+          </section>
+          <section>
+            <h3>Agilité</h3>
+            <p>Apprentissage des rituels Scrum et gestion de projet.</p>
+          </section>
+          <section>
+            <h3>Personal Branding</h3>
+            <p>Optimisation du profil LinkedIn et création du portfolio.</p>
+          </section>
+          <section>
+            <h3>SEO &amp; Environnement</h3>
+            <p>Référencement naturel et configuration d'environnements de dev pros.</p>
+          </section>
+          <section>
+            <h3>Compétences E5</h3>
+            <p>Validation des blocs de compétences :</p>
+            <ul class="text-small" style="text-align: left; display: inline-block;">
+              <li>✅ Gérer le patrimoine informatique</li>
+              <li>✅ Répondre aux incidents</li>
+              <li>✅ Développer la présence en ligne</li>
+              <li>✅ Travailler en mode projet</li>
+              <li>✅ Mettre à disposition un service</li>
+              <li>✅ Concevoir une solution applicative</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Slide 7 : Conclusion -->
+        <section>
+          <h2 class="slide-title">Conclusion</h2>
+          <p>Bilan de ces deux années de formation.</p>
+        </section>
+
+        <!-- Slide 8 : Questions -->
+        <section>
+          <h2 class="slide-title">Des questions ?</h2>
+          <p>Je suis à votre écoute pour échanger sur mon parcours.</p>
+        </section>
+
+        <!-- Slide 9 : Merci -->
+        <section>
+          <h2 class="slide-title">Merci</h2>
+          <p>Merci de m'avoir écouté.</p>
+          <p class="slide-subtitle">Fin de la présentation</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       @section SCRIPT PRINCIPAL
+       @perf `defer` : le script est téléchargé en parallèle du parsing HTML
+             et exécuté après que le DOM est prêt, sans bloquer le rendu.
+             Gain sur le Time to Interactive (TTI) et le Total Blocking Time (TBT).
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script src="./script.js" defer></script>
+
+</body>
+</html>
