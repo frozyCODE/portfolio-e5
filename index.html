@@ -228,7 +228,6 @@
         -->
         <ul class="nav-links" role="list" aria-label="Liens de navigation">
           <li><a href="#fiches"     class="nav-link">Fiches E5</a></li>
-          <li><a href="#experience" class="nav-link">Parcours</a></li>
           <li>
             <button
               id="btn-oral-e5"
@@ -281,101 +280,6 @@
     </section>
 
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         @section PARCOURS (Timeline SVG)
-         @seo `<section>` + `<h2>` "Parcours Pro" → signal thématique clair.
-               Chaque expérience est un `<article>` avec `<h3>` comme titre
-               de niveau 3 cohérent dans la hiérarchie h1 > h2 > h3.
-         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <section id="experience" class="exp-section" aria-labelledby="exp-title">
-      <div class="exp-container">
-        <h2 class="exp-main-title" id="exp-title">Parcours Pro</h2>
-
-        <!--
-          @a11y SVG décoratif : `aria-hidden="true"` pour que les SR
-                ignorent complètement cet élément graphique non informatif.
-          @perf SVG inline ou référencé en CSS est préférable à <img>
-                pour de petits graphiques vectoriels (pas de requête HTTP).
-        -->
-        <div class="exp-timeline-wrapper" aria-hidden="true">
-          <svg width="4" height="100%" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <line id="timeline-line" x1="2" y1="0" x2="2" y2="100%" class="svg-line" />
-          </svg>
-        </div>
-
-        <!-- @a11y `role="list"` explicite car CSS peut supprimer la sémantique de liste -->
-        <div class="exp-list-items" role="list">
-
-          <!-- ══ Expérience 1 : Stage Automatique & Industrie ══ -->
-          <article class="exp-item" id="exp-1" role="listitem">
-            <div class="exp-dot" aria-hidden="true"></div>
-            <div class="exp-content-box">
-              <!--
-                @a11y `<time>` avec attribut `datetime` encode la date
-                      de façon machine-readable pour les SR et le JSON-LD.
-              -->
-              <time class="exp-date" datetime="2026-01/2026-03">01-2026 — 03-2026 • Stage</time>
-              <h3 class="exp-title">Développeur Full-Stack Node.js</h3>
-              <h4 class="exp-company">Automatique &amp; Industrie</h4>
-              <ul class="exp-bullets">
-                <li>Développement de nouvelles fonctionnalités sur <strong>Holonet</strong>, outil de gestion interne du groupe.</li>
-                <li>Participation à la migration du back-end de <strong>Go vers Node.js</strong>.</li>
-                <li>Environnement moderne utilisant <strong>Vue.js (Nuxt)</strong> et intégration d'API REST.</li>
-                <li>Travail en équipe agile (Scrum) et standardisation via <strong>Docker &amp; WSL</strong>.</li>
-              </ul>
-              <div class="exp-tags" aria-label="Technologies utilisées">
-                <span class="tag">Node.js</span>
-                <span class="tag">Nuxt / Vue.js</span>
-                <span class="tag">Scrum</span>
-                <span class="tag">Docker</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- ══ Expérience 2 : Stage TIMC CNRS ══ -->
-          <article class="exp-item" id="exp-2" role="listitem">
-            <div class="exp-dot" aria-hidden="true"></div>
-            <div class="exp-content-box">
-              <time class="exp-date" datetime="2025-03/2025-06">03-2025 — 06-2025 • Stage</time>
-              <h3 class="exp-title">Développeur Full-Stack Java</h3>
-              <h4 class="exp-company">Laboratoire TIMC - CNRS / UGA</h4>
-              <ul class="exp-bullets">
-                <li>Conception et développement de <strong>CardiacTS</strong>, application de bureau pour la recherche cardiaque.</li>
-                <li>Architecture logicielle en <strong>JavaFX</strong> suivant le pattern <strong>MVC</strong>.</li>
-                <li>Mise en place d'un stockage hybride : <strong>PostgreSQL</strong> (meta) et <strong>MinIO</strong> (imagerie S3).</li>
-                <li>Garantie de la traçabilité et de la sécurisation des données de santé sensibles.</li>
-              </ul>
-              <div class="exp-tags" aria-label="Technologies utilisées">
-                <span class="tag">JavaFX</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">MinIO</span>
-                <span class="tag">Docker</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- ══ Expérience 3 : Freelance In the Wallet ══ -->
-          <article class="exp-item" id="exp-3" role="listitem">
-            <div class="exp-dot" aria-hidden="true"></div>
-            <div class="exp-content-box">
-              <time class="exp-date" datetime="2025-03/2025-06">03-2025 — 06-2025 • Freelance</time>
-              <h3 class="exp-title">Développeur Web</h3>
-              <h4 class="exp-company">In the Wallet</h4>
-              <ul class="exp-bullets">
-                <li>Conception et développement d'une application web et d'un tableau de bord sécurisé pour une société d'investissement.</li>
-                <li>Mise en place d'une consultation des soldes, et suivi transactionnel.</li>
-              </ul>
-              <div class="exp-tags" aria-label="Technologies utilisées">
-                <span class="tag">Node.js</span>
-                <span class="tag">Express</span>
-                <span class="tag">EJS</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
 
     <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
          @section FICHES DE RÉALISATIONS (E5)
