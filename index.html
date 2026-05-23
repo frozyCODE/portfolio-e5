@@ -185,6 +185,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" />
 
   <!-- Feuille de style locale -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -650,9 +651,15 @@
           <section>
             <h2 class="slide-title">Stage 1 : Automatique &amp; Industrie</h2>
             <h3 class="slide-subtitle">Le Contexte &amp; L'Environnement Technique</h3>
-            <!-- Espace logo entreprise et icônes tech -->
-            <div style="width: 100%; max-width: 600px; height: 80px; border: 2px dashed rgba(255,255,255,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 15px auto;">
-              <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem; text-align: center;">[ Logos Entreprise/Groupe + Icônes Vue.js, Nuxt, Go, Git, WSL ]</span>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin: 15px auto;">
+              <img src="./public/auto-indus-logo.png" alt="Logo Automatique &amp; Industrie" style="max-height: 70px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">
+              <div style="font-size: 2.2rem; display: flex; gap: 15px;">
+                <i class="devicon-vuejs-plain colored" title="Vue.js"></i>
+                <i class="devicon-nuxtjs-plain colored" title="Nuxt.js"></i>
+                <i class="devicon-go-original-wordmark colored" title="Go"></i>
+                <i class="devicon-git-plain colored" title="Git"></i>
+                <i class="devicon-linux-plain" style="color: white;" title="WSL"></i>
+              </div>
             </div>
             <ul style="text-align: left; font-size: 0.8em; line-height: 1.5; margin-top: 20px;">
               <li><strong>Projet :</strong> Suite applicative HoloNet (applications Django-D et Yan Solo).</li>
@@ -674,10 +681,7 @@
               <li><strong>Modernisation :</strong> Connexion directe à l'API Bound pour récupérer automatiquement les Business Units.</li>
               <li><strong>Fiabilisation :</strong> Intégration de Decimal.js pour sécuriser les calculs (TVA, restants dus).</li>
             </ul>
-            <!-- Espace visuel Avant / Après -->
-            <div style="width: 100%; max-width: 600px; height: 150px; border: 2px dashed rgba(255,255,255,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-              <span style="color: rgba(255,255,255,0.5); font-size: 0.8rem; text-align: center;">[ Visuel Avant/Après ou Capture des composants ]</span>
-            </div>
+
           </section>
           <section>
             <h3>Le Bilan &amp; Les Acquis</h3>
@@ -695,9 +699,8 @@
             <h2 class="slide-title">Stage 2ème année</h2>
             <h3 class="slide-subtitle">Laboratoire TIMC - CNRS / UGA</h3>
             <p>Stagiaire Développeur Java - Architecture Logicielle &amp; Données</p>
-            <!-- Espace logo entreprise (à remplacer par une balise <img>) -->
-            <div style="width: 200px; height: 80px; border: 2px dashed rgba(255,255,255,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 20px auto;">
-              <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">[ Logo TIMC ]</span>
+            <div style="display: flex; align-items: center; justify-content: center; margin: 20px auto;">
+              <img src="./public/logo-timc.png" alt="Logo Laboratoire TIMC" style="max-height: 80px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">
             </div>
             <div class="sub-slide-hint">⬇️</div>
           </section>
